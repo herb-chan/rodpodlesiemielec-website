@@ -1,0 +1,17 @@
+.container {
+    width: fit-content;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding-block: 8px;
+    padding-inline: 16px;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.container:hover {
+    background-color: #15803d;
+}

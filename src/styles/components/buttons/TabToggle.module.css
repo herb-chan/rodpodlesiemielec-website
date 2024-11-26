@@ -1,0 +1,48 @@
+.tab_container {
+    position: relative;
+    display: flex;
+    background-color: var(--container-color);
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    /* Shadow for the whole container */
+}
+
+.tab_item {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
+    flex: 1;
+    padding: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+    /* Place buttons above the indicator */
+}
+
+.tab_item.active {
+    color: var(--header-color);
+}
+
+.icon {
+    margin-right: 8px;
+    /* Space between icon and text */
+}
+
+.tab_indicator {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: var(--left-offset, 0);
+    width: calc(100% / var(--tab-count));
+    background-color: var(--background-color);
+    border-radius: 4px;
+    transition: transform 0.3s ease, left 0.3s ease;
+    z-index: 0;
+    /* Place below the buttons */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Shadow for the indicator */
+}

@@ -1,0 +1,35 @@
+.container {
+    border-radius: 8px;
+    padding: 24px;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--container-color);
+    width: 300px;
+    max-width: 400px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.container p {
+    color: var(--text-color);
+}
+
+.details_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon {
+    font-size: 48px;
+    color: var(--header-color);
+}
+
+.phone_number {
+    font-weight: bold;
+}

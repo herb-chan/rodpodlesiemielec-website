@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.inner {
+    background-color: var(--container-color);
+    padding: 24px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.header {
+    color: var(--header-color);
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    padding-block: 4px;
+}
+
+.error .header {
+    background-color: var(--error-color);
+}
+
+.warning .header {
+    background-color: var(--warning-color);
+}
+
+.success .header {
+    background-color: var(--accent-color);
+}
+
+.info .header {
+    background-color: var(--error-color);
+}
+
+.inner_header {
+    display: flex;
+    gap: 10px;
+    color: var(--header-color);
+    align-items: center;
+    margin-inline: 24px;
+}

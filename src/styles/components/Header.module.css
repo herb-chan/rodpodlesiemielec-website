@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+.container:hover .headerlink {
+    opacity: 100;
+}
+
+.headerlink {
+    opacity: 0;
+    color: var(--accent-color);
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.headerlink:hover {
+    text-decoration: underline;
+}

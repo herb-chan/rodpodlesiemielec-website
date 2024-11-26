@@ -1,0 +1,53 @@
+.container {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+}
+
+.content {
+    display: flex;
+}
+
+.categories {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categories,
+.category_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category_content {
+    width: 50%;
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.box_header {
+    color: var(--text-color);
+}

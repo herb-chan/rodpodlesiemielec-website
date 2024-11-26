@@ -1,0 +1,57 @@
+.aboutContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding-block: 4px;
+    padding-inline: 6px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    color: var(--header-color);
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.inner_tooltip {
+    padding: 8px;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--container-color) transparent transparent transparent;
+}
+
+.aboutContainer:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

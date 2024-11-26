@@ -1,0 +1,35 @@
+.button {
+    border: none;
+    width: fit-content;
+    padding-block: 8px;
+    padding-inline: 16px;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.button p {
+    color: var(--header-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.button:focus::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px var(--accent-color);
+    pointer-events: none;
+}

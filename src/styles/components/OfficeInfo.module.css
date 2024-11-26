@@ -1,0 +1,71 @@
+.section {
+    width: 50%;
+    border-radius: 8px;
+    padding: 24px;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--container-color);
+    height: min-content;
+}
+
+.sectionHeader {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.sectionTitle {
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+.button {
+    width: 100%;
+    text-align: start;
+    background-color: var(--container-color);
+    border: none;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.open {
+    color: var(--accent-color);
+}
+
+.closed {
+    color: var(--error-color);
+}
+
+.hours {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.show {
+    max-height: 500px;
+    transition: max-height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.day_name {
+    color: var(--header-color);
+}
+
+.caretIcon {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

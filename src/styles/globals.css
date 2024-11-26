@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base Light Theme */
+:root {
+    --background-color: #f3f3f3;
+    --container-color: #fff;
+
+    --header-color: #000;
+    --text-color: #7b7b7b;
+
+    --neutral-color: #e0e0e0;
+    --neutral-hover-color: #d5d5d5;
+    --neutral-active-color: #c9c9c9;
+
+    --accent-color: #43b430;
+    --accent-hover-color: #308122;
+    --accent-active-color: #2a6c1c;
+
+    --error-color: #ec6060;
+    --error-hover-color: #b94b4b;
+    --error-active-color: #9e3e3e;
+
+    --warning-color: #fbbf14;
+    --warning-hover-color: #c7980f;
+    --warning-active-color: #a8800d;
+
+    --information-color: #1a73e8;
+    --information-hover-color: #155ab3;
+    --information-active-color: #0f428f;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --background-color: #332f35;
+    --container-color: #1f1c23;
+
+    --header-color: #eaeaea;
+    --text-color: #928a99;
+
+    --neutral-color: #3c3740;
+    --neutral-hover-color: #4c4550;
+    --neutral-active-color: #363139;
+
+    --accent-color: #61983c;
+    --accent-hover-color: #7abf4c;
+    --accent-active-color: #578836;
+
+    --error-color: #c75343;
+    --error-hover-color: #f96854;
+    --error-active-color: #b34a3c;
+
+    --warning-color: #cc9938;
+    --warning-hover-color: #ffc046;
+    --warning-active-color: #b78932;
+
+    --information-color: #3c7898;
+    --information-hover-color: #4b96be;
+    --information-active-color: #366c88;
+}
+
+/* Grayscale Theme */
+[data-theme="grayscale"] {
+    --background-color: #f2f2f2;
+    --container-color: #dcdcdc;
+
+    --header-color: #2e2e2e;
+    --text-color: #595959;
+
+    --neutral-color: #bfbfbf;
+    --neutral-hover-color: #a6a6a6;
+    --neutral-active-color: #8c8c8c;
+
+    --accent-color: #7d7d7d;
+    --accent-hover-color: #6b6b6b;
+    --accent-active-color: #5a5a5a;
+
+    --error-color: #808080;
+    --error-hover-color: #6b6b6b;
+    --error-active-color: #5a5a5a;
+
+    --warning-color: #a6a6a6;
+    --warning-hover-color: #8c8c8c;
+    --warning-active-color: #737373;
+
+    --information-color: #7d7d7d;
+    --information-hover-color: #6b6b6b;
+    --information-active-color: #5a5a5a;
+}
+
+/* High-Contrast Theme */
+[data-theme="high-contrast"] {
+    --background-color: #000000;
+    /* Solid black background */
+    --container-color: #1a1a1a;
+    /* Dark gray container for subtle distinction */
+
+    --header-color: #ffffff;
+    /* Bright white headers */
+    --text-color: #ffffff;
+    /* Bright white text */
+
+    --neutral-color: #ffdd00;
+    /* Bright yellow neutral elements (buttons, borders) */
+    --neutral-hover-color: #ffcc00;
+    /* Slightly darker yellow on hover */
+    --neutral-active-color: #ffaa00;
+    /* Orange-yellow on active state */
+
+    --accent-color: #00ffff;
+    /* Bright cyan for accents (links, buttons) */
+    --accent-hover-color: #00cccc;
+    /* Slightly darker cyan on hover */
+    --accent-active-color: #009999;
+    /* Deep cyan on active state */
+
+    --error-color: #ff5555;
+    /* Bright red for errors */
+    --error-hover-color: #ff3333;
+    /* Darker red on hover */
+    --error-active-color: #cc0000;
+    /* Deep red on active state */
+
+    --warning-color: #ffaa00;
+    /* Bright orange for warnings */
+    --warning-hover-color: #ff8800;
+    /* Darker orange on hover */
+    --warning-active-color: #ff5500;
+    /* Deep orange on active state */
+
+    --information-color: #00ff00;
+    /* Bright green for information */
+    --information-hover-color: #00cc00;
+    /* Darker green on hover */
+    --information-active-color: #009900;
+    /* Deep green on active state */
+}
+
+/* Media query for system preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0ms !important;
+        transition-duration: 0ms !important;
+    }
+}
+
+/* Attribute-based selector for manually enabled reduced motion */
+[data-reduce-motion='true'] * {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+}
+
+body,
+html {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--background-color);
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+    /* 2rem */
+}
+
+h2 {
+    font-size: 28px;
+    /* 1.75rem */
+}
+
+h3 {
+    font-size: 24px;
+    /* 1.5rem */
+}
+
+h4 {
+    font-size: 20px;
+    /* 1.25rem */
+}
+
+h5 {
+    font-size: 18px;
+    /* 1.125rem */
+}
+
+h6,
+th {
+    font-size: 16px;
+    /* 1rem */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-color);
+}
+
+p,
+td,
+small,
+a {
+    color: var(--text-color);
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p,
+td {
+    font-size: 16px;
+    /* 1rem */
+}
+
+small {
+    font-size: 14px;
+    /* 0.875rem */
+}

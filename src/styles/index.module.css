@@ -1,0 +1,56 @@
+.container {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paginator {
+    display: flex;
+    justify-content: center;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pages a {
+    text-decoration: none;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.active_page {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.pages .active_page {
+    text-decoration: underline;
+}
+
+.news_and_paginator {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    height: 100%;
+}
